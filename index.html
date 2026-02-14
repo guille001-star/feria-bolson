@@ -70,11 +70,6 @@
       font-weight: 400;
     }
 
-    .highlight {
-      color: #8b6b3d;
-      font-weight: 500;
-    }
-    
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -138,23 +133,24 @@
       transform: scale(1.03);
     }
     
+    .instagram-cta {
+      margin-top: 15px;
+    }
+    
     .instagram-link {
-      display: inline-flex;
-      align-items: center;
+      display: inline-block;
       color: #e8d3b5;
       font-size: 1.1rem;
       text-decoration: none;
-      margin-top: 10px;
       font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.3s;
     }
     
     .instagram-link:hover {
+      background: rgba(232, 211, 181, 0.15);
       color: #f5e9d9;
-    }
-    
-    .instagram-link i {
-      margin-right: 8px;
-      font-size: 1.3rem;
     }
     
     footer {
@@ -239,13 +235,16 @@
 
     <div class="cta-section">
       <h2>¿Te gustaría tener una pieza única en tu hogar o negocio?</h2>
+      
       <a href="https://wa.me/5492494467662?text=Hola%2C%20me%20interesa%20una%20pieza%20de%20herrer%C3%ADa%20artesanal.%20%C2%A1Gracias!" class="whatsapp-btn" target="_blank">
         📱 Contacto para ventas y envíos
       </a>
-      <br>
-      <a href="https://instagram.com/herreriadonjulio" class="instagram-link" target="_blank">
-        👁️‍🗨️ ¿Querés ver más modelos? Seguinos en Instagram → @herreriadonjulio
-      </a>
+      
+      <div class="instagram-cta">
+        <a href="https://www.instagram.com/herreria.donjulio/" class="instagram-link" target="_blank">
+          👁️‍🗨️ Mirá nuestros productos — Seguinos en Instagram
+        </a>
+      </div>
     </div>
 
     <footer>
