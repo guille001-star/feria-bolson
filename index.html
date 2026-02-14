@@ -110,7 +110,7 @@
     .cta-section h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.2rem;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       color: #e8d3b5;
     }
     
@@ -123,7 +123,7 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 1.2rem;
-      margin: 15px 0 25px;
+      margin: 10px 0;
       box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
       transition: all 0.3s;
     }
@@ -133,24 +133,27 @@
       transform: scale(1.03);
     }
     
-    .instagram-cta {
-      margin-top: 15px;
-    }
-    
-    .instagram-link {
+    .instagram-btn {
       display: inline-block;
-      color: #e8d3b5;
-      font-size: 1.1rem;
+      background: #E1306C; /* Color oficial de Instagram */
+      color: white;
+      padding: 12px 28px;
+      border-radius: 50px;
       text-decoration: none;
-      font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: background 0.3s;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 10px 0;
+      box-shadow: 0 4px 12px rgba(225, 48, 108, 0.35);
+      transition: all 0.3s;
     }
     
-    .instagram-link:hover {
-      background: rgba(232, 211, 181, 0.15);
-      color: #f5e9d9;
+    .instagram-btn:hover {
+      background: #bd205a; /* Rosa más oscuro al pasar el mouse */
+      transform: scale(1.03);
+    }
+    
+    .action-buttons {
+      margin-top: 20px;
     }
     
     footer {
@@ -200,9 +203,13 @@
         font-size: 1.8rem;
       }
 
-      .whatsapp-btn {
-        font-size: 1.1rem;
-        padding: 12px 28px;
+      .whatsapp-btn,
+      .instagram-btn {
+        font-size: 1.05rem;
+        padding: 11px 24px;
+        display: block;
+        margin: 12px auto;
+        width: fit-content;
       }
     }
   </style>
@@ -236,12 +243,12 @@
     <div class="cta-section">
       <h2>¿Te gustaría tener una pieza única en tu hogar o negocio?</h2>
       
-      <a href="https://wa.me/5492494467662?text=Hola%2C%20me%20interesa%20una%20pieza%20de%20herrer%C3%ADa%20artesanal.%20%C2%A1Gracias!" class="whatsapp-btn" target="_blank">
-        📱 Contacto para ventas y envíos
-      </a>
-      
-      <div class="instagram-cta">
-        <a href="https://www.instagram.com/herreria.donjulio/" class="instagram-link" target="_blank">
+      <div class="action-buttons">
+        <a href="https://wa.me/5492494467662?text=Hola%2C%20me%20interesa%20una%20pieza%20de%20herrer%C3%ADa%20artesanal.%20%C2%A1Gracias!" class="whatsapp-btn" target="_blank">
+          📱 Contacto para ventas y envíos
+        </a>
+        
+        <a href="https://www.instagram.com/herreria.donjulio/" class="instagram-btn" target="_blank">
           👁️‍🗨️ Mirá nuestros productos — Seguinos en Instagram
         </a>
       </div>
