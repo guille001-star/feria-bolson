@@ -14,8 +14,8 @@
     
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #f8f5f0;
-      color: #2c2c2c;
+      background: #f9f4eb;
+      color: #2b221c;
       line-height: 1.6;
       padding: 0;
     }
@@ -28,53 +28,71 @@
     
     header {
       text-align: center;
-      padding: 40px 0 30px;
-      border-bottom: 1px solid #e0d8c8;
+      padding: 50px 0 30px;
+      border-bottom: 2px solid #d4c3a8;
+      position: relative;
+    }
+    
+    header::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #8b6b3d;
+      margin: 15px auto 0;
     }
     
     h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
+      font-size: 3.2rem;
       font-weight: 700;
-      color: #1a1a1a;
+      color: #1a130e;
       margin-bottom: 10px;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
     }
     
     .subtitle {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: #8b6b3d;
       font-style: italic;
       margin-bottom: 20px;
     }
     
     .description {
-      max-width: 700px;
+      max-width: 750px;
       margin: 0 auto 40px;
-      font-size: 1.1rem;
-      color: #444;
+      font-size: 1.15rem;
+      color: #3a3025;
       text-align: center;
       line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .highlight {
+      color: #8b6b3d;
+      font-weight: 500;
     }
     
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 30px;
       margin: 40px 0;
     }
     
     .gallery-item {
       background: white;
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      transition: all 0.3s ease;
     }
     
     .gallery-item:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
     }
     
     .gallery-item img {
@@ -84,49 +102,59 @@
       display: block;
     }
     
-    .contact {
-      background: #fff9f0;
-      padding: 30px;
-      border-radius: 12px;
+    .cta-section {
+      background: linear-gradient(135deg, #2b221c 0%, #3a3025 100%);
+      padding: 45px 20px;
+      border-radius: 16px;
       text-align: center;
-      margin: 40px 0;
-      border: 1px solid #e8e0d0;
+      margin: 50px 0;
+      color: #f5e9d9;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     }
     
-    .contact h2 {
+    .cta-section h2 {
       font-family: 'Cormorant Garamond', serif;
-      color: #1a1a1a;
-      margin-bottom: 15px;
-      font-size: 1.8rem;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #e8d3b5;
     }
     
-    .location {
-      font-size: 1.1rem;
-      color: #8b6b3d;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
-
     .whatsapp-btn {
       display: inline-block;
       background: #25D366;
       color: white;
-      padding: 12px 24px;
-      border-radius: 30px;
+      padding: 14px 32px;
+      border-radius: 50px;
       text-decoration: none;
-      font-weight: 500;
-      font-size: 1.1rem;
-      margin-top: 15px;
-      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
-      transition: background 0.3s;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 15px 0 25px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s;
     }
-
+    
     .whatsapp-btn:hover {
       background: #128C7E;
+      transform: scale(1.03);
     }
-
-    .whatsapp-btn i {
+    
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      color: #e8d3b5;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    
+    .instagram-link:hover {
+      color: #f5e9d9;
+    }
+    
+    .instagram-link i {
       margin-right: 8px;
+      font-size: 1.3rem;
     }
     
     footer {
@@ -151,11 +179,11 @@
     /* Mobile optimization */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
       }
       
       .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
       
       .description {
@@ -169,7 +197,16 @@
       }
 
       .gallery-item img {
-        height: 220px;
+        height: 240px;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .whatsapp-btn {
+        font-size: 1.1rem;
+        padding: 12px 28px;
       }
     }
   </style>
@@ -179,41 +216,41 @@
   <div class="container">
     <header>
       <h1>HERRERÍA ARTESANAL</h1>
-      <div class="subtitle">"Don Julio"</div>
+      <div class="subtitle">“Don Julio”</div>
       <p class="tagline">Arte en hierro · Pasión en cada pieza</p>
     </header>
 
     <p class="description">
-      Nuestros productos son una inversión en calidad, durabilidad y resistencia. 
-      Cada pieza es forjada a mano con técnicas tradicionales y materiales de primera calidad.
+      Cada obra es forjada a mano con <span class="highlight">técnica ancestral, fuego y dedicación</span>. 
+      Nuestros productos no son solo objetos: son <span class="highlight">herencia, resistencia y belleza atemporal</span>. 
       Encontranos en la Feria Artesanal y Regional de El Bolsón, Puesto 44 A.
     </p>
 
     <div class="gallery">
       <div class="gallery-item">
-        <img src="https://i.ibb.co/1GQgvF0L/messi3.jpg" alt="Trabajo artesanal en hierro - Don Julio">
+        <img src="https://i.ibb.co/1GQgvF0L/messi3.jpg" alt="Herrería Don Julio - Pieza artesanal en hierro forjado">
       </div>
       <div class="gallery-item">
-        <img src="https://i.ibb.co/zHF0KZdQ/futbol.jpg" alt="Herrería artesanal - Pieza forjada a mano">
+        <img src="https://i.ibb.co/zHF0KZdQ/futbol.jpg" alt="Trabajo en metal artesanal - Don Julio El Bolsón">
       </div>
       <div class="gallery-item">
-        <img src="https://i.ibb.co/j94dTRhQ/Whats-App-Image-2026-02-05-at-20-55-54.jpg" alt="Detalles en hierro forjado - Don Julio">
+        <img src="https://i.ibb.co/j94dTRhQ/Whats-App-Image-2026-02-05-at-20-55-54.jpg" alt="Detalles de herrería artesanal - Patagonia Argentina">
       </div>
     </div>
 
-    <div class="contact">
-      <h2>¿Querés contactar a Don Julio?</h2>
-      <div class="location">
-        📍 Feria Artesanal y Regional de El Bolsón<br>
-        Puesto 44 A
-      </div>
-      <a href="https://wa.me/5492494467662" class="whatsapp-btn" target="_blank">
-        📱 Enviar mensaje por WhatsApp
+    <div class="cta-section">
+      <h2>¿Te gustaría tener una pieza única en tu hogar o negocio?</h2>
+      <a href="https://wa.me/5492494467662?text=Hola%2C%20me%20interesa%20una%20pieza%20de%20herrer%C3%ADa%20artesanal.%20%C2%A1Gracias!" class="whatsapp-btn" target="_blank">
+        📱 Contacto para ventas y envíos
+      </a>
+      <br>
+      <a href="https://instagram.com/herreriadonjulio" class="instagram-link" target="_blank">
+        👁️‍🗨️ ¿Querés ver más modelos? Seguinos en Instagram → @herreriadonjulio
       </a>
     </div>
 
     <footer>
-      <p>Proyecto comunitario · El Bolsón, Patagonia Argentina</p>
+      <p>📍 Feria Artesanal y Regional de El Bolsón | Puesto 44 A</p>
       
       <div class="developer">
         Desarrollado por <strong>Guillermo Oyarzo</strong> — Soluciones digitales para emprendedores<br>
