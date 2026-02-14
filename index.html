@@ -1,233 +1,231 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Herrería Artesanal Don Julio - El Bolsón</title>
+  <title>Herrería Artesanal Don Julio | El Bolsón</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      max-width: 800px; 
-      margin: 0 auto; 
-      padding: 20px; 
-      background: #f9f9f9; 
-      color: #333;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .header { 
-      text-align: center; 
-      margin-bottom: 25px; 
-      border-bottom: 1px solid #eee; 
-      padding-bottom: 15px;
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f8f5f0;
+      color: #2c2c2c;
+      line-height: 1.6;
+      padding: 0;
     }
-    .header h1 { 
-      color: #2c3e50; 
-      margin: 0; 
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
     }
-    .photos { 
-      display: flex; 
-      gap: 10px; 
-      margin: 25px 0; 
-      flex-wrap: wrap; 
-      justify-content: center;
-    }
-    .photos img { 
-      width: 30%; 
-      min-width: 150px;
-      border-radius: 10px; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .contact { 
-      background: #e3f2fd; 
-      padding: 18px; 
-      border-radius: 10px; 
-      margin: 25px 0; 
+    
+    header {
       text-align: center;
+      padding: 40px 0 30px;
+      border-bottom: 1px solid #e0d8c8;
     }
-    .contact a { 
-      color: #0277bd; 
-      font-weight: bold; 
+    
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    
+    .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: #8b6b3d;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    
+    .description {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+      color: #444;
+      text-align: center;
+      line-height: 1.8;
+    }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .gallery-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .contact {
+      background: #fff9f0;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 40px 0;
+      border: 1px solid #e8e0d0;
+    }
+    
+    .contact h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: #1a1a1a;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+    
+    .location {
+      font-size: 1.1rem;
+      color: #8b6b3d;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
       text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-top: 15px;
+      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+      transition: background 0.3s;
     }
-    .contact a:hover { 
-      text-decoration: underline; 
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
     }
-    .footer { 
-      text-align: center; 
-      color: #666; 
-      font-size: 14px; 
-      margin-top: 40px; 
-      padding-top: 20px; 
-      border-top: 1px solid #eee;
+
+    .whatsapp-btn i {
+      margin-right: 8px;
     }
+    
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #e0d8c8;
+      margin-top: 20px;
+    }
+    
     .developer {
       margin-top: 20px;
-      font-size: 13px;
+      font-size: 0.85rem;
       color: #555;
-      line-height: 1.5;
     }
+    
     .developer strong {
-      color: #1a237e;
+      color: #1a1a1a;
     }
-    .contact-info {
-      font-size: 12px;
-      color: #888;
-      margin-top: 12px;
+    
+    /* Mobile optimization */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .description {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+      
+      .gallery {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+      }
+
+      .gallery-item img {
+        height: 220px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>Herrería Artesanal "Don Julio"</h1>
-    <p><em>Arte en hierro ... pasión en cada pieza !!!</em></p>
-  </div>
+  <div class="container">
+    <header>
+      <h1>HERRERÍA ARTESANAL</h1>
+      <div class="subtitle">"Don Julio"</div>
+      <p class="tagline">Arte en hierro · Pasión en cada pieza</p>
+    </header>
 
-  <p>Nuestros productos son una inversión en calidad, durabilidad y resistencia. Encontranos en la feria artesanal y regional de El Bolsón, Puesto 44 A.</p>
+    <p class="description">
+      Nuestros productos son una inversión en calidad, durabilidad y resistencia. 
+      Cada pieza es forjada a mano con técnicas tradicionales y materiales de primera calidad.
+      Encontranos en la Feria Artesanal y Regional de El Bolsón, Puesto 44 A.
+    </p>
 
-  <div class="photos">
-    <img src="https://i.ibb.co/TU-CODIGO-IMAGEN-1/maria1.png" alt="Herrería Don Julio - Pieza 1">
-    <img src="https://i.ibb.co/TU-CODIGO-IMAGEN-2/maria2.png" alt="Herrería Don Julio - Pieza 2">
-    <img src="https://i.ibb.co/TU-CODIGO-IMAGEN-3/maria3.png" alt="Herrería Don Julio - Pieza 3">
-  </div>
-
-  <!-- CONTACTO DEL ARTESANO -->
-  <div class="contact">
-    <h3>¿Querés contactar a Don Julio?</h3>
-    <p>📍 Encontralo en la Feria de El Bolsón | Puesto 44 A</p>
-  </div>
-
-  <!-- TU FIRMA COMO DESARROLLADOR -->
-  <div class="footer">
-    <p>📍 Feria Artesanal y Regional de El Bolsón | Proyecto comunitario</p>
-    
-    <div class="developer">
-      Desarrollado por <strong>Guillermo Oyarzo</strong> — Soluciones digitales para emprendedores<br>
-      Automatización • Inteligencia Artificial • Control de procesos • Presencia web accesible
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://i.ibb.co/1GQgvF0L/messi3.jpg" alt="Trabajo artesanal en hierro - Don Julio">
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.ibb.co/zHF0KZdQ/futbol.jpg" alt="Herrería artesanal - Pieza forjada a mano">
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.ibb.co/j94dTRhQ/Whats-App-Image-2026-02-05-at-20-55-54.jpg" alt="Detalles en hierro forjado - Don Julio">
+      </div>
     </div>
-    
-    <div class="contact-info">
-      ¿Querés tu propio QR informativo? Contactame:<br>
-      📧 geopat001@gmail.com &nbsp; | &nbsp; 📱 +54 280 468-5815
+
+    <div class="contact">
+      <h2>¿Querés contactar a Don Julio?</h2>
+      <div class="location">
+        📍 Feria Artesanal y Regional de El Bolsón<br>
+        Puesto 44 A
+      </div>
+      <a href="https://wa.me/5492494467662" class="whatsapp-btn" target="_blank">
+        📱 Enviar mensaje por WhatsApp
+      </a>
     </div>
+
+    <footer>
+      <p>Proyecto comunitario · El Bolsón, Patagonia Argentina</p>
+      
+      <div class="developer">
+        Desarrollado por <strong>Guillermo Oyarzo</strong> — Soluciones digitales para emprendedores<br>
+        Automatización • Inteligencia Artificial • Presencia web accesible
+      </div>
+      
+      <div class="contact-info" style="margin-top: 12px; font-size: 0.85rem; color: #777;">
+        ¿Querés tu propio sitio web profesional? Contactame:<br>
+        📧 geopat001@gmail.com &nbsp; | &nbsp; 📱 +54 280 468-5815
+      </div>
+    </footer>
   </div>
 
 </body>
-=======
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Artesanía en la Feria de El Bolsón</title>
-  <style>
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      max-width: 800px; 
-      margin: 0 auto; 
-      padding: 20px; 
-      background: #f9f9f9; 
-      color: #333;
-    }
-    .header { 
-      text-align: center; 
-      margin-bottom: 25px; 
-      border-bottom: 1px solid #eee; 
-      padding-bottom: 15px;
-    }
-    .header h1 { 
-      color: #2c3e50; 
-      margin: 0; 
-    }
-    .photos { 
-      display: flex; 
-      gap: 10px; 
-      margin: 25px 0; 
-      flex-wrap: wrap; 
-      justify-content: center;
-    }
-    .photos img { 
-      width: 30%; 
-      min-width: 150px;
-      border-radius: 10px; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .contact { 
-      background: #e3f2fd; 
-      padding: 18px; 
-      border-radius: 10px; 
-      margin: 25px 0; 
-      text-align: center;
-    }
-    .contact a { 
-      color: #0277bd; 
-      font-weight: bold; 
-      text-decoration: none;
-    }
-    .contact a:hover { 
-      text-decoration: underline; 
-    }
-    .footer { 
-      text-align: center; 
-      color: #666; 
-      font-size: 14px; 
-      margin-top: 40px; 
-      padding-top: 20px; 
-      border-top: 1px solid #eee;
-    }
-    .developer {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #555;
-      line-height: 1.5;
-    }
-    .developer strong {
-      color: #1a237e;
-    }
-    .contact-info {
-      font-size: 12px;
-      color: #888;
-      margin-top: 12px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="header">
-    <h1>[Nombre del Artesano]</h1>
-    <p><em>Artesano/a en la Feria de El Bolsón</em></p>
-  </div>
-
-  <p>[Aquí irá una breve historia: cómo empezó, qué hace, por qué lo hace, origen de los materiales, etc.]</p>
-
-  <div class="photos">
-    <img src="https://via.placeholder.com/300" alt="Producto 1">
-    <img src="https://via.placeholder.com/300" alt="Producto 2">
-    <img src="https://via.placeholder.com/300" alt="Producto 3">
-  </div>
-
-  <!-- CONTACTO DEL ARTESANO -->
-  <div class="contact">
-    <h3>¿Querés contactarme?</h3>
-    <p>📱 WhatsApp: <a href="https://wa.me/[NÚMERO_ARTESANO]">Enviar mensaje</a></p>
-    <p>📸 Instagram: <a href="https://instagram.com/[usuario]" target="_blank">@[usuario]</a></p>
-  </div>
-
-  <!-- TU FIRMA COMO DESARROLLADOR -->
-  <div class="footer">
-    <p>📍 Encontrame en la Feria de El Bolsón | Proyecto comunitario</p>
-    
-    <div class="developer">
-      Desarrollado por <strong>Guillermo Oyarzo</strong> — Soluciones digitales para emprendedores<br>
-      Automatización • Inteligencia Artificial • Control de procesos • Presencia web accesible
-    </div>
-    
-    <div class="contact-info">
-      ¿Querés tu propio QR informativo? Contactame:<br>
-      📧 geopat001@gmail.com &nbsp; | &nbsp; 📱 +54 280 468-5815
-    </div>
-  </div>
-
-</body>
->>>>>>> c76041dbce7f6cee6fcbdc6780e9e15210780374
 </html>
